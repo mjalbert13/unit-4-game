@@ -20,11 +20,20 @@ $(document).ready(function(){
     diamond = Math.floor(Math.random() * 11 +1);
     saphire = Math.floor(Math.random() * 11+1);
     emrald = Math.floor(Math.random() * 11 +1);
-
-    $("#wins").text("Wins " + wins);
-    $("#losses").text("Losses " + losses);
+    
+    $("#wins").text("Wins: " + wins);
+    $("#losses").text("Losses: " + losses);
     $("#score").text(counter);
 
+    if(ruby===diamond ||ruby === saphire || ruby === emrald){
+        reStart();
+    }
+    if(diamond === saphire || diamond ===emrald){
+        reStart();
+    }
+    if(saphire === emrald){
+        reStart();
+    }
     // set up restart funtion to start new game
     function reStart(){
         randomNumber = Math.floor(Math.random() * 101+19);
@@ -34,6 +43,16 @@ $(document).ready(function(){
         diamond = Math.floor(Math.random() * 11 +1);
         saphire = Math.floor(Math.random() * 11+1);
         emrald = Math.floor(Math.random() * 11 +1);
+        
+        if(ruby===diamond ||ruby === saphire || ruby === emrald){
+            reStart();
+        }
+        if(diamond === saphire || diamond ===emrald){
+            reStart();
+        }
+        if(saphire === emrald){
+            reStart();
+        }
 
         counter = 0;
        
@@ -61,6 +80,7 @@ $(document).ready(function(){
             reStart();
         }
     }
+
 // On click count goes up by the value of crystal clicked and checks for win/loss
     $("#ruby").on("click", function() {
         counter += ruby;

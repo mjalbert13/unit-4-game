@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>crystal game</title>
     <link rel="stylesheet" href="assests/css/reset.css">
-    <link rel="stylesheet" href="assests/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assests/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
@@ -22,9 +22,9 @@
         </div>
     </header>
     
-    <div class="row">
-        <div class="card">
-            <div class="card-body justify-content-center">
+    <div class="row instruction">
+        <div class="card my-info">
+            <div class="card-body justify-content-center" >
                 <h2>How to play</h2>
                 <p>The object of the game is to match the target number. Each Crystal has a hidden value that will increase your score.</p>
                 <p>If your score equals the target score you win but if you go over you lose.</p>
@@ -32,10 +32,10 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-4 justify-content-center">
+    <div class="row stat-row">
+        <div class="col-md-4 align-content-center">
             <div class="randomNumb">
-                <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card border-info mb-3" style="max-width: 18rem;">
                     <div class="card-header">Target Number</div>
                     <div class="card-body text-dark">
                       <h1 id="computer-number"></h1>
@@ -44,8 +44,8 @@
             </div>
         </div>
     
-        <div class="col-md-4">
-            <div class="card border-dark mb-3" style="max-width: 18rem;">
+        <div class="col-md-4 ">
+            <div class="card border-info mb-3" style="max-width: 18rem;">
                 <div class="card-header">Your Score</div>
                 <div class="card-body text-dark">
                     <h1 id="score"></h1>
@@ -53,8 +53,8 @@
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card border-dark mb-3" style="max-width: 18rem;">
+        <div class="col-md-4 justify-content-center">
+            <div class="card border-info mb-3" style="max-width: 18rem;">
                 <div class="card-header">Your Stats</div>
                 <div class="card-body text-dark">
                     <h6 id="wins">Wins 0</h2>
@@ -63,10 +63,10 @@
             </div>               
         </div>
         
-    
     </div>
 
-    <div class="row">
+    <div class="row crystal-row" >
+       
         <div class="col-md-3 justify-content-center">
             <div class="crystal" id ="ruby">
                 <img src="../unit-4-game/assests/images/ruby.png" alt="ruby" class="mx-auto d-block">
@@ -98,7 +98,6 @@
     </div>
 
 </div>
-
 
 </body>
 
